@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Back-end') {
             agent {
-                docker { 'python:2-alpine' }
+                docker { image 'python:2-alpine' }
             }
 
             steps {
