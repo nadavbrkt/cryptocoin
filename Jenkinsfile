@@ -11,6 +11,17 @@ pipeline {
                 sh 'echo dd'
             }
         }
+
+        stage ('front-end') {
+            agent {
+                docker { image 'python:2-alpine' }
+            }
+
+            steps {
+                sh 'python --version'
+                sh 'echo dd'
+            }
+        }
     }
 
 }
