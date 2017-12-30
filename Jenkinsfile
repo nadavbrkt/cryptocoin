@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage ('Back-end') {
             agent {
-                docker { image 'python:2-alpine' }
+                docker { image 'jenkins/ssh-slave' }
             }
 
             steps {
-                sh 'python --version'
+                sh 'java -version'
             }
         }
     }
